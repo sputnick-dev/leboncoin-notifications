@@ -16,9 +16,10 @@ fi
 
 shopt -s nullglob
 
+intrandfromrange() { echo $(( ( RANDOM % ($2 - $1 +1 ) ) + $1 )); }
+
 # makes some randomness when used in crontab
 if [[ ! -t 0 ]]; then
-    intrandfromrange() { echo $(( ( RANDOM % ($2 - $1 +1 ) ) + $1 )); }
     sleep $(intrandfromrange 1 1200)
 fi
 

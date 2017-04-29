@@ -8,7 +8,7 @@ free_sms_api_pass=$5
 mail_title="leboncoin notifier"
 
 if [[ ! -d $2 ]]; then
-    echo >&2 "$0 <url> <casperjs directory> [free_sms_api_user] [free_sms_api_pass]"
+    echo >&2 "Usage: $0 <url> <casperjs directory> [free_sms_api_user] [free_sms_api_pass]"
     exit 1
 fi
 

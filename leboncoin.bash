@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# simple wrapper over casperjs script
+
 search_url="$1"
 base_dir=$2
 default_mail=$3

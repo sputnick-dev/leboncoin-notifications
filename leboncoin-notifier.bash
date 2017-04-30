@@ -27,7 +27,7 @@ rm -f /tmp/lbc_[0-9a-fA-F]*_.png
 
 cd "$base_dir"
 
-# if there's some fresh links, the caspersjs script will create images matching /tmp/lbc_[0-9]*.png
+# if there's some fresh links, the caspersjs script will create images matching /tmp/lbc_[0-9a-fA-F]*.png
 casperjs leboncoin-alerter.js --url="$search_url" "$@"
 
 for image in /tmp/lbc_[0-9a-fA-F]*_.png; do

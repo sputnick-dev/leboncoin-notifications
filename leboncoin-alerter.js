@@ -16,7 +16,6 @@ var casper = require('casper').create();
 var debug = casper.cli.has("verbose");
 require('./casper_lib'); // add debug stuff and url filtering
 var xpath = require('casper').selectXPath;
-var utils = require('utils');
 
 // global vars part
 var idsParsed = [];
@@ -49,7 +48,7 @@ casper.then(function(){
     })
 
     for (var x=1; x<=count; x++) {
-        (function(x) { // IIFE, no need casper.each. Not needed with a forEach, because it use already a function by default
+        (function(x) { // IIFE, no need casper.each here
             casper.then(function() {
                 var href = casper.evaluate(function(x) {
                     return __utils__.getElementByXPath('//section[@id="listingAds"]/section/section/ul/li['+x+']/a')

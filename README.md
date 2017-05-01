@@ -4,7 +4,7 @@ Cet outil qui se veut simple et efficace, permet de vous notifier par mail avec 
 
 Si vous avez un compte free mobile, vous pouvez aussi avoir des notification via SMS.
 
-A placer en (crontab)[https://fr.wikipedia.org/wiki/Cron] toutes les heures par exemple.
+A placer en [crontab](https://fr.wikipedia.org/wiki/Cron) toutes les heures par exemple.
 
 # installation sous linux
 -  mailx, curl, casperjs, phantomjs

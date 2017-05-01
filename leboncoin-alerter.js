@@ -3,7 +3,6 @@ var system = require('system');
 var env = system.env;
 var home = env.HOME;
 var path = home + '/.config/lbc'
-var serialization_file = path + 'data.json'
 var fs = require('fs');
 fs.makeDirectory(path); // http://phantomjs.org/api/fs/
 var serialization_file = path + '/data.json';

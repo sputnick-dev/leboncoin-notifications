@@ -11,7 +11,7 @@ A placer en [crontab](https://fr.wikipedia.org/wiki/Cron) toutes les heures par 
 
 http://docs.casperjs.org/en/latest/installation.html
 
-Pour le mail, vérifier que la commande suivante fonctionne :
+Pour le mail, vérifier que la commande suivante fonctionne (necessite [SSMTP](https://wiki.archlinux.org/index.php/SSMTP) ou bien un serveur de mail correctement configuré :
 
 `echo test | mail -s test -a /chemin/vers/une/image.png mail@domain.tld`
 

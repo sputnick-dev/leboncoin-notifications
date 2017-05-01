@@ -77,7 +77,7 @@ casper.then(function(){
                             echoOnDebug("=> timeout waiting for page");
                             //throw 'timeout error';
                         }, 16000);
-                        echoOnDebug("=> trying to write image " + filename);
+                        echoOnDebug("=> write " + filename + " file to FS");
                         casper.captureSelector(filename, xpath('//section[@id="listingAds"]/section/section/ul/li['+x+']'));
                     }
                 }

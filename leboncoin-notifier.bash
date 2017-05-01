@@ -21,6 +21,8 @@ intrandfromrange() { echo $(( ( RANDOM % ($2 - $1 +1 ) ) + $1 )); }
 # makes some randomness when used in crontab
 if [[ ! -t 0 ]]; then
     sleep $(intrandfromrange 1 1200)
+else
+    verbose='-v'
 fi
 
 rm -f /tmp/lbc_[0-9a-fA-F]*_.png
@@ -36,8 +38,8 @@ for image in /tmp/lbc_[0-9a-fA-F]*_.png; do
     if [[ -s $image ]]; then
         echo "$url" |
             # send email with captured image + link
-            mail -v -a "$image" -s "$mail_title" $default_mail
+            mail $verbose -a "$image" -s "$mail_title" $default_mail
             # send sms with free SMS API if this argument is provided
-            [[ $free_sms_api_pass ]] && curl -v "https://smsapi.free-mobile.fr/sendmsg?user=$free_sms_api_user&pass=$free_sms_api_pass&msg=check%20email%20for%20leboncoin%20alerter"
+            [[ $free_sms_api_pass ]] && curl $verbose "https://smsapi.free-mobile.fr/sendmsg?user=$free_sms_api_user&pass=$free_sms_api_pass&msg=check%20email%20for%20leboncoin%20alerter"
     fi
 done

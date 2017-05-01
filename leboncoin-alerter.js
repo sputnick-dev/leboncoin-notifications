@@ -14,7 +14,7 @@ var data = require(serialization_file);
 // casper init part
 var casper = require('casper').create();
 var debug = casper.cli.has("verbose");
-if (debug) require('./casper_lib'); // add debug stuff and url filtering
+require('./casper_lib'); // add debug stuff and url filtering
 var xpath = require('casper').selectXPath;
 var utils = require('utils');
 

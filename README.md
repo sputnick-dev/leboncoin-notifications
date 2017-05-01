@@ -2,7 +2,7 @@
 
 Cet outil qui se veut simple et efficace, permet de vous notifier par mail avec une image et l'url des nouvelles ventes concernant une recherche precise via son url leboncoin.fr, a entrer en paramètre du script.
 
-Si vous avez un compte free mobile, vous pouvez aussi avoir des notification via SMS.
+Si vous avez un compte free mobile, vous pouvez aussi avoir des notification via [SMS](https://www.freenews.fr/freenews-edition-nationale-299/free-mobile-170/nouvelle-option-notifications-par-sms-chez-free-mobile-14817).
 
 A placer en [crontab](https://fr.wikipedia.org/wiki/Cron) toutes les heures par exemple.
 

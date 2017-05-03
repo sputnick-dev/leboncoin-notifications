@@ -16,5 +16,5 @@ Pour le mail, vérifier que la commande suivante fonctionne (nécessite [SSMTP](
 `echo test | mail -s test -a /chemin/vers/une/image.png mail@domain.tld`
 
 # usage
-`./leboncoin-notifier <leboncoin search url> <email> [free_sms_api_user] [free_sms_api_pass]`
+`./leboncoin-notifier <leboncoin search url> <email> [free_sms_api_user] [free_sms_api_pass] [--verbose] [other casper options...]`
 

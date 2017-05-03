@@ -99,5 +99,5 @@ casper.run(function() {
         casper.echo("=> capture to /tmp/out.png");
         casper.capture('/tmp/out.png');
     }
-    casper.exit();
+    casper.exit(0);
 })

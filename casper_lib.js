@@ -1,17 +1,8 @@
 // http://docs.casperjs.org/en/latest/writing_modules.html
+// http://docs.casperjs.org/en/latest/extending.html
 
 casper.userAgent("Mozilla/5.0 (Macintosh; Intel Mac OS X 10.8; rv:23.0) Gecko/20130404 Firefox/23.0");
 casper.options.viewportSize = { width: 1024, height: 768 };
-
-// debug in case of error (need to use try {} catch(e) { }
-// for an evaluate (TODO override casper.evaluate)
-casper.on('error', function(msg, backtrace) {
-    console.log('backtrace: ' + JSON.stringify(backtrace, null, 4));
-    console.log('message: ' + JSON.stringify(msg, null, 4));
-    console.log('check capture in /tmp/error.png');
-    this.capture('/tmp/error.png');
-    casper.exit(1);
-})
 
 casper.options.onResourceRequested = function(casper, requestData, request) {
     var skip = [
@@ -63,9 +54,21 @@ casper.options.onResourceRequested = function(casper, requestData, request) {
     })
 }
 
+// debug in case of error (need to use try {} catch(e) { }
+// for an evaluate (TODO override casper.evaluate)
+casper.on('error', function(msg, backtrace) {
+    console.log('backtrace: ' + JSON.stringify(backtrace, null, 4));
+    console.log('message: ' + JSON.stringify(msg, null, 4));
+    console.log('check capture in /tmp/error.png');
+    this.capture('/tmp/error.png');
+})
+
 if (debug) {
+    // debug evaluate
     casper.on("page.error", function(msg, trace) {
         console.log('\033[1;31m' + 'Page error: ' + msg + '\033[0m');
+        throw ''; // trigger onError
+
     });
 
     casper.on('resource.error', function(resourceError, trace) {

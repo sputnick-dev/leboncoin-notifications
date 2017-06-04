@@ -43,7 +43,7 @@ casper.options.onResourceRequested = function(casper, requestData, request) {
         'schibsted.com'
     ];
     if (skipImage != false && /\.(?:css|png|gif|svg|ttf)(?:;|$)/i.test(requestData.url)) {
-        console.log("blocked url " + requestData.url);
+        debug && console.log("blocked url " + requestData.url);
         request.abort();
     }
     skip.forEach(function(needle) {

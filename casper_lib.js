@@ -5,10 +5,9 @@ casper.userAgent("Mozilla/5.0 (Macintosh; Intel Mac OS X 10.8; rv:23.0) Gecko/20
 casper.options.viewportSize = { width: 1024, height: 768 };
 
 casper.options.onResourceRequested = function(casper, requestData, request) {
-    var skip = [
-        'googleads.g.doubleclick.net',
-        'cm.g.doubleclick.net',
-        'www.googleadservices.com',
+   var skip = [
+        'doubleclick.net',
+        'googleads',
         'xiti.js',
         'tracking',
         'omnitagjs.com',

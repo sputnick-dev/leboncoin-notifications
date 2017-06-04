@@ -14,6 +14,7 @@ var data = require(serialization_file);
 var casper = require('casper').create();
 var debug = casper.cli.has("verbose");
 var skipImage = false;
+var authorized_urls = [ 'about:blank', 'leboncoin.fr' ];
 
 require('./casper_lib'); // add debug stuff and url filtering
 var xpath = require('casper').selectXPath;

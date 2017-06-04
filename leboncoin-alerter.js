@@ -13,6 +13,8 @@ var data = require(serialization_file);
 // casper init part
 var casper = require('casper').create();
 var debug = casper.cli.has("verbose");
+var skipImage = false;
+
 require('./casper_lib'); // add debug stuff and url filtering
 var xpath = require('casper').selectXPath;
 

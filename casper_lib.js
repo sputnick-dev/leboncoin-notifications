@@ -4,11 +4,13 @@
 casper.userAgent("Mozilla/5.0 (Macintosh; Intel Mac OS X 10.8; rv:23.0) Gecko/20130404 Firefox/23.0");
 casper.options.viewportSize = { width: 1024, height: 768 };
 
+if (!skipImage) skipImage = true;
+
 casper.options.onResourceRequested = function(casper, requestData, request) {
    var skip = [
         'doubleclick.net',
         'googleads',
-        'xiti.js',
+        'xiti',
         'tracking',
         'omnitagjs.com',
         'cedexis.com',
@@ -40,11 +42,10 @@ casper.options.onResourceRequested = function(casper, requestData, request) {
         'tiqcdn.com',
         'schibsted.com'
     ];
-    // jpe?g needed here
-    //if (/\.(?:css|png|gif|svg|ttf)(?:;|$)/i.test(requestData.url)) {
-    //    console.log("blocked url " + requestData.url);
-    //    request.abort();
-    //}
+    if (skipImage != false && /\.(?:css|png|gif|svg|ttf)(?:;|$)/i.test(requestData.url)) {
+        console.log("blocked url " + requestData.url);
+        request.abort();
+    }
     skip.forEach(function(needle) {
         if (requestData.url.indexOf(needle) > 0) {
             debug && console.log("blocked url " + requestData.url);

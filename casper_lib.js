@@ -92,4 +92,22 @@ if (debug) {
     })
 }
 
+casper.existsText = function(selector, text) {
+    var sel, type;
+    if (!selector || !text) throw 'casper.existsText require 2 arguments';
+    if (typeof selector == 'Object' && selector.hasAttribute('path')) {
+        type = 'xpath';
+        sel = selector.path;
+    } else {
+        type = 'css';
+        sel = selector;
+    }
+
+    return casper.evaluate(function(type, sel, text) {
+        var node = type == 'xpath' ? __utils__.getElementByXpath(sel) : __utils__.findOne(sel);
+        var re = new RegExp(text);
+        return re.test(node.textContent);
+    }, type, sel, text);
+}
+
 exports.casper = casper;

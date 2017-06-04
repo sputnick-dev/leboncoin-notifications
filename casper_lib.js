@@ -42,7 +42,7 @@ casper.options.onResourceRequested = function(casper, requestData, request) {
         'tiqcdn.com',
         'schibsted.com'
     ];
-    if (skipImage != false && /\.(?:css|png|gif|svg|ttf)(?:;|$)/i.test(requestData.url)) {
+    if (skipImage != false && /\.(?:jpe?g|css|png|gif|svg|ttf)(?:;|$)/i.test(requestData.url)) {
         debug && console.log("blocked url " + requestData.url);
         request.abort();
     }

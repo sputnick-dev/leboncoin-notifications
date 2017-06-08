@@ -4,7 +4,7 @@
 casper.userAgent("Mozilla/5.0 (Macintosh; Intel Mac OS X 10.8; rv:23.0) Gecko/20130404 Firefox/23.0");
 casper.options.viewportSize = { width: 1024, height: 768 };
 
-if (!skipImage) skipImage = true;
+if (!skipImage && typeof skipImage != 'boolean') skipImage = true;
 if (!authorized_urls) authorized_urls = [ 'about:blank' ];
 
 casper.options.onResourceRequested = function(casper, requestData, request) {

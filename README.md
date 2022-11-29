@@ -1,3 +1,6 @@
+# Cet outil est obsolète en raison des changements du site leboncoin. Voir leboncoin API
+
+
 # leboncoin-notifier
 
 Cet outil qui se veut simple et efficace, permet de vous notifier par mail avec une image et l'url des nouvelles ventes concernant une recherche precise via son url leboncoin.fr, a entrer en paramètre du script.

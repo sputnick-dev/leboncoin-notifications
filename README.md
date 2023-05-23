@@ -1,5 +1,4 @@
-# Cet outil est obsolète en raison des changements du site leboncoin. Voir leboncoin API
-
+# Cet outil est obsolète en raison des changements du site leboncoin. (Datadome).
 
 # leboncoin-notifier
 

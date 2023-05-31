@@ -1,4 +1,4 @@
-# Cet outil est obsolète en raison des changements du site leboncoin. (Datadome).
+# Cet outil est obsolète en raison des changements du site leboncoin. **Me contacter en privé si vous avez besoin de récupérer des datas sur mesure.**.
 
 # leboncoin-notifier
 

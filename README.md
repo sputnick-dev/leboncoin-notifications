@@ -1,4 +1,4 @@
-# Cet outil est obsolète en raison des changements du site leboncoin. **Me contacter en privé si vous avez besoin de récupérer des datas sur mesure, email: gq@sputnick-dev.fr** (enlevez `-dev` de l'email). Aucune limite, travail rapide et efficace.
+# Cet outil est obsolète en raison des changements du site leboncoin. **Me contacter en privé si vous avez besoin de récupérer des datas sur mesure, email: scraping@sputnick-dev.fr** (enlevez `-dev` de l'email). Aucune limite, travail rapide et efficace.
 
 # leboncoin-notifier
 

@@ -1,6 +1,3 @@
-// http://docs.casperjs.org/en/latest/writing_modules.html
-// http://docs.casperjs.org/en/latest/extending.html
-
 casper.userAgent("Mozilla/5.0 (Macintosh; Intel Mac OS X 10.8; rv:23.0) Gecko/20130404 Firefox/23.0");
 casper.options.viewportSize = { width: 1024, height: 768 };
 

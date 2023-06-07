@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# simple wrapper over casperjs script
+# Wrapper over casperjs script
 
 search_url="$1"
 default_mail=$2

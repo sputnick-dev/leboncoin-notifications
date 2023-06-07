@@ -4,7 +4,7 @@ var env = system.env;
 var home = env.HOME;
 var path = home + '/.config/lbc'
 var fs = require('fs');
-fs.makeDirectory(path); // http://phantomjs.org/api/fs/
+fs.makeDirectory(path);
 var serialization_file = path + '/data.json';
 if (!fs.isFile(serialization_file) || fs.size(serialization_file) == 0)
     fs.write(serialization_file, '[ ]', 'w');
@@ -19,7 +19,6 @@ var authorized_urls = [ 'about:blank', 'leboncoin.fr' ];
 require('./casper_lib'); // add debug stuff and url filtering
 var xpath = require('casper').selectXPath;
 
-// global vars part
 var idsParsed = [];
 var url = casper.cli.get('url');
 if (!url || !/leboncoin\.fr/.test(url)) {
@@ -93,8 +92,6 @@ casper.then(function(){
     // serialization to JSON file for future comparison
     var bigArray = data.concat(idsParsed);
     fs.write(serialization_file, JSON.stringify(bigArray), 'w');
-    // XXX improvment: create an object with dates and wipe stuff > n days if the JSON get too big for memory
-    // or use sqlite :)
 })
 
 casper.run(function() {

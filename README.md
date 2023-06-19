@@ -1,4 +1,4 @@
-# leboncoin-notifier
+# leboncoin-notifications
 
 Cet outil qui se veut simple et efficace, vous permet d'être notifié par Telegram (smartphone ET/OU ordinateur de bureau) avec preview et l'adresse URL des nouvelles ventes concernant une ou des recherches precises via l'url leboncoin.fr.
 

@@ -1,6 +1,6 @@
 # leboncoin-notifications
 
-Cet outil qui se veut simple et efficace, vous permet d'être notifié par [Telegram](https://telegram.org/) (smartphone/tablette ET/OU ordinateur de bureau) avec preview et l'adresse URL des nouvelles ventes concernant une ou des recherches precises via l'url leboncoin.fr.
+Cet outil qui se veut simple et efficace, vous permet d'être notifié par [Telegram](https://telegram.org/) (smartphone/tablette ET/OU ordinateur de bureau) avec preview et l'adresse URL des nouvelles ventes concernant une ou des recherches precises via l'url de recherche leboncoin.fr.
 
 ![](https://sputnick.fr/downloads/leboncoin-demo.png)
 

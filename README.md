@@ -4,7 +4,7 @@ Cet outil qui se veut rapide, simple et efficace, vous permet d'être notifié p
 
 ![](https://sputnick.fr/downloads/leboncoin-demo.png)
 
-Me contacter en privé: **email: scraping@sputnick-dev.fr** (enlevez `-dev` de l'email).
+Me contacter en privé: **email: web-scraping@sputnick-dev.fr** (enlevez `-dev` de l'email).
 
 # Disclaimer
 Le code CasperJS ici présent est obsolète en raison du fait que CasperJS est un projet abandonné et des changements du site leboncoin. La version à jour n'est pas publique ni partagé. c'est un service tout en un proposé sur demande en fonction des besoins spécifiques. Voyez ça comme de l'artisanat. 
